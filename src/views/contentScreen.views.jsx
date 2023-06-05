@@ -32,7 +32,7 @@ export default function ContentScreenView({ children }) {
                     </ul>
                 </aside>
 
-                <div className="fixed bottom-0 left-0 flex justify-center items-center h-48 w-48 z-30 drop-shadow-xl backdrop-blur-sm cursor-pointer" onClick={() => setModalOpen(true)}>
+                <div className="fixed bottom-0 left-0 flex justify-center items-center h-48 w-48 z-30 drop-shadow-xl cursor-pointer" onClick={() => setModalOpen(true)}>
                     <svg className="absolute-center h-56 w-56" viewBox="0 0 500 500">
                         <defs>
                             <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"

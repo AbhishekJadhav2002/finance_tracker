@@ -3,18 +3,27 @@ import income_icon from '../assets/income-icon.svg';
 import expense_icon from '../assets/expense-icon.svg';
 import invest_icon from '../assets/invest-icon.svg';
 import recurring_icon from '../assets/recurring-icon.svg';
+import { useAddTransaction } from "../hooks/transactions.hooks";
 
 export default function TransactionModal({ setModalOpen }) {
     const [transactionType, setTransactionType] = useState("");
     const [transactionTitle, setTransactionTitle] = useState("");
     const [timestamp, setTimestamp] = useState("");
     const [amount, setAmount] = useState("");
+    const { mutate, isLoading } = useAddTransaction();
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const formData = new FormData(e.target)
         const data = Object.fromEntries(formData.entries())
-        console.log(data)
+        mutate(data, {
+            onSuccess: () => {
+                setModalOpen(false)
+            },
+            onError: () => {
+                alert('Error')
+            }
+        })
     };
 
     return (
@@ -101,9 +110,9 @@ export default function TransactionModal({ setModalOpen }) {
                 </div>
                 <button
                     className={`px-2 md:px-6 py-2 font-semibold focus:outline-0 transition-[border-style] duration-400 rounded-md bg-green-100 border-2 border-dashed border-green-400 hover:border-solid ${false && 'cursor-no-drop'}`}
-                    disabled={false}
+                    disabled={isLoading}
                 >
-                    {false ?
+                    {isLoading ?
                         <>
                             <svg className='inline spin_loader -ml-2 mr-2 h-6 w-6 text-white will-change-transform' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
                                 <circle className='opacity-25' cx='12' cy='12' r='10' stroke='#2563eb' strokeWidth='4'></circle>

@@ -1,0 +1,60 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "title": "Salary",
+      "amount": 10000,
+      "type": "income",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 2,
+      "title": "Rent",
+      "amount": 5000,
+      "type": "expense",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 3,
+      "title": "Investment",
+      "amount": 1000,
+      "type": "invest",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 4,
+      "title": "Rent",
+      "amount": 5000,
+      "type": "recurring",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 5,
+      "title": "Dinner",
+      "amount": 500,
+      "type": "expense",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 6,
+      "title": "Recharge",
+      "amount": 300,
+      "type": "recurring",
+      "timestamp": "Mon Jun 05 2023 21:17:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "transactionType": "income",
+      "title": "Stipend",
+      "timestamp": "2023-06-03T16:09",
+      "amount": "12000",
+      "id": 7
+    },
+    {
+      "transactionType": "income",
+      "title": "Stipend",
+      "timestamp": "2023-06-02T14:13",
+      "amount": "12000",
+      "id": 8
+    }
+  ]
+}
