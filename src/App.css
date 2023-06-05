@@ -5,3 +5,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.spin_loader {
+  animation: spin_loader 1s linear infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes spin_loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
